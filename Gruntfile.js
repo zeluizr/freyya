@@ -1,4 +1,11 @@
 module.exports = function(grunt) {
+
+	var src = grunt.option('src');
+	var dest = grunt.option('dest');
+
+	src = (dest == null) ? "src/" : src;
+	dest = (dest == null) ? "dist/" : dest;
+
 	grunt.initConfig({
 		imagemin: {
 			main: {
